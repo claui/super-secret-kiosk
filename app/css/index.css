@@ -79,6 +79,7 @@ input[type=text] {
 }
 
 .alert {
+  visibility: hidden;
   padding: 20px;
   color: white;
   color: #FF78AF;
