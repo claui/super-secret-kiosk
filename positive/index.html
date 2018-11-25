@@ -12,7 +12,7 @@ input[type=button], input[type=submit], input[type=reset] {
     border: 1px solid black;
     border-radius: 100px;
     color: #808080;
-    font-family:Futura Std;
+    font-family:Futura;
     font-weight: lighter;
     font-size: 100%;
     letter-spacing: 5px;
@@ -30,7 +30,7 @@ input[type=text] {
     box-sizing: border-box;
     background-color: #ffffff;
     color: black;
-    font-family:Futura Std;
+    font-family:Futura;
     font-weight: lighter;
     font-size: 200%;
     text-transform: uppercase;
@@ -46,6 +46,21 @@ input[type=button]:active {
   color: #808080;
 }
 
+.alert {
+    padding: 20px;
+    color: white;
+    background-color: #FFFFFF;
+    color: #FF78AF;
+    font-family:Futura;
+    font-weight: lighter;
+    font-size: 100%;
+    text-transform: uppercase;
+    line-height: 110%;
+    letter-spacing: 5px;
+    width: 40vw;
+}
+
+
 </style>
 </head>
 <body style="background-color:white;">
@@ -54,9 +69,11 @@ input[type=button]:active {
 <input type="button" value="SEND">
 
 <form>
-  <input type="text" id="positivep" name="positivep" style="text-align:center;" maxlength="20">
-	<p style="margin-top: 20px; width: 400px; color:#808080; font-family:Futura Std; font-weight: lighter; font-size:100%; line-height: 150%; letter-spacing: 5px;"><label for="negativep">ENVISION OUR FUTURE. MAKE A HOPEFUL PREDICTION.</label></p>
+  <input type="text" id="positivep" name="positivep" style="text-align:center;" maxlength="25">
+	<p style="margin-top: 20px; width: 400px; color:#808080; font-family:Futura; font-weight: lighter; font-size:100%; line-height: 150%; letter-spacing: 5px;"><label for="negativep">ENVISION OUR FUTURE. MAKE A HOPEFUL PREDICTION.</label></p>
 </form>
+
+<div class="alert"> This was a mistake. You shouldn't have done it.</div>
 
 </body>
 </html>
