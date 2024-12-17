@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "animejs": "^2.2.0"
-  },
   "devDependencies": {
     "parcel": "^2.13.2",
     "sass": "^1.14.1",
