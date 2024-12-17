@@ -41,6 +41,27 @@ Follow these steps to check out the development version:
 
 10. Direct your browser to `http://localhost:1234/negative.html` or `http://localhost:1234/positive.html`.
 
+## Setting up a self-hosted Debian server
+
+```bash
+mkdir -p /usr/share/led-wall-webclient-kiosk/www/html
+chgrp led-wall /usr/share/led-wall-webclient-kiosk/www/html
+chmod 775 /usr/share/led-wall-webclient-kiosk/www/html
+a2enmod alias
+a2enmod proxy
+a2enmod proxy_http
+touch /etc/apache2/sites-available/led-wall-webclient-kiosk.conf
+a2ensite led-wall-webclient-kiosk.conf
+systemctl restart apache2.service
+```
+
+## Deploying to a self-hosted Debian server
+
+```bash
+rsync -ciprt --rsync-path="sudo rsync" contrib/apache2/sites-available/ led-wall:/etc/apache2/sites-available/
+yarn build && rsync -aci --delete dist/ led-wall:/usr/share/led-wall-webclient-kiosk/www/html/
+```
+
 ## Acknowledgements
 
 - [Anime](http://animejs.com/) by [Julian Garnier](https://github.com/juliangarnier) ([license](https://github.com/juliangarnier/anime/blob/69131dc2a9fee58de6a9a986015a78341a15deca/LICENSE.md))
