@@ -3,8 +3,7 @@
     "animejs": "^2.2.0"
   },
   "devDependencies": {
-    "node-sass": "^4.9.3",
-    "parcel-bundler": "^1.9.7",
+    "parcel": "^2.13.2",
     "sass": "^1.14.1",
     "trash-cli": "^1.4.0"
   },
@@ -15,7 +14,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "build": "yarn trash dist && yarn parcel build --no-minify --public-url '/kiosk/' app/*.html",
+    "build": "yarn trash dist && yarn parcel build --no-optimize --public-url '/kiosk/' app/*.html",
     "serve": "yarn parcel serve app/*.html"
   }
 }
